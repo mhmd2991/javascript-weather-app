@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --whiteColor: #ffffff;
+    --textColor: #555555;
+    --lightGray: #ebfffc;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 45rem;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.weather-wrapper {
+    background-image: linear-gradient(135deg, #4d8aea 0%, #08aeea 50%, #2af598 100%);
+    color: var(--whiteColor);
+    padding: 4rem 3.5rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 51rem;
+}
+
+.weather-wrapper .search-box .form-group {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.weather-wrapper .search-box .form-group .fa-location-dot {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    color:var(--textColor);
+    font-size: 1.8rem;
+}
+
+.weather-wrapper .search-box .form-group input {
+    width: 100%;
+    height: 6rem;
+    padding: 1rem 2.5rem 1rem 4.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--lightGray);
+    color: var(--textColor);
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    flex: 1;
+}
+
+.weather-wrapper .search-box .form-group input:focus::placeholder {
+    opacity: 0;
+}
+
+.weather-wrapper .search-box .form-group .search-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.5rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--textColor);
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.weather-wrapper .weather-error {
+    margin: 3rem auto 0;
+    transform: scale(0);
+    opacity: 0;
+    display: none;
+}
+
+.weather-wrapper .weather-error h1 {
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+
+.weather-wrapper .weather-details {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fade-in .5s forwards;
+    animation-delay: .5s;
+}
+
+@keyframes fade-in {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.weather-wrapper .weather-details .image {
+    width: 17rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.weather-wrapper .weather-details .image img {
+    width: 100%;
+}
+
+.weather-wrapper .weather-details .temperature {
+    font-size: 5rem;
+}
+
+.weather-wrapper .weather-details .city {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.weather-wrapper .weather-details .desc {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.weather-wrapper .weather-details .details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.weather-wrapper .weather-details .details .humidity,
+.weather-wrapper .weather-details .details .wind {
+    display: flex;
+    gap: 1rem;
+}
+
+.weather-wrapper .weather-details .details i {
+    font-size: 4rem;
+}
+
+.weather-wrapper .weather-details .details .humidity .humidity-details,
+.weather-wrapper .weather-details .details .wind .wind-details {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}

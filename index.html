@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JavaScript Weather App</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="weather-wrapper">
+            <div class="search-box">
+                <div class="form-group">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" placeholder="Enter Country Name" id="searchItem">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="weather-error">
+                <h1>oops! invalid location :/</h1>
+            </div>
+            <div class="weather-details">
+                <div class="image">
+                    <img src="" alt="">
+                </div>
+                <h2 class="temperature"></h2>
+                <h3 class="desc"></h3>
+                <h3 class="city"></h3>
+                <div class="details">
+                    <div class="humidity">
+                        <i class="fa-solid fa-water"></i>
+                        <div class="humidity-details">
+                            <h4>humidity</h4>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="wind">
+                        <i class="fa-solid fa-wind"></i>
+                        <div class="wind-details">
+                            <h4>wind speed</h4>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
